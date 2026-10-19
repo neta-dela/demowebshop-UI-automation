@@ -1,12 +1,9 @@
-import { homePageLocators } from '../selestors/HomePage';
+import { headerLocators } from '../selestors/header';
+import { BasePage } from './BasePage';
 
-export class HomePage {
+export class HomePage extends BasePage {
   visit() {
     cy.visit('/');
-  }
-
-  clickRegister() {
-    cy.get(homePageLocators.registerButton).click();
   }
 
   getIntoRegistrationPage() {

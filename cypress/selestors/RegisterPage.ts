@@ -8,7 +8,6 @@ export const registerLocators = {
   email: '#Email',
   password: '#Password',
   confirmPassword: '#ConfirmPassword',
-  registerButton: '#register-button',
   submitButton: '.register-next-step-button',
   resultMessage: '.registration-result-page .result',
   continueButton: '.register-continue-button',

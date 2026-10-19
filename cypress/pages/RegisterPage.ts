@@ -1,9 +1,10 @@
 import { IUser } from '../fixtures/UserInterface';
-import { homePageLocators } from '../selestors/HomePage';
+import { headerLocators } from '../selestors/header';
 import { registerLocators } from '../selestors/RegisterPage';
-import { Gender, getNewUser } from '../utils/RegisterUtils';
+import { Gender } from '../utils/RegisterUtils';
+import { BasePage } from './BasePage';
 
-export class RegisterPage {
+export class RegisterPage extends BasePage {
   selectGender(gender: Gender) {
     cy.get(registerLocators.gender[gender]).check();
   }
@@ -30,8 +31,5 @@ export class RegisterPage {
   register(user: IUser) {
     this.fillDetails(user);
     this.submit();
-  }
-  getHeaderEmail() {
-    return cy.get(homePageLocators.emailHeader);
   }
 }
